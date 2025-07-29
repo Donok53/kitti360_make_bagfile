@@ -1,0 +1,10 @@
+<launch>
+  <arg name="seq" default="2013_05_28_drive_0000_sync"/>
+
+  <!-- Python에서 처리한 datetime을 넘겨받도록 -->
+  <param name="seq_name" value="$(arg seq)"/>
+
+  <node pkg="bin_to_bag" type="publish_lidar_imu_gt.py" name="kitti360_pub" output="screen" />
+
+  <!-- rosbag record는 이 launch에서 제거됨 -->
+</launch>
