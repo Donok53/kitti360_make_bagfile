@@ -334,7 +334,7 @@ if __name__=="__main__":
     T_cam0_lidar   = np.eye(4)  # calib_cam_to_velo.txt 대로 수정
 
     # GT pose에서 IMU 생성 모드 (True: GT에서 생성, False: 기존 IMU 파일 사용)
-    use_gt_imu = True  # 개선된 GT IMU 테스트
+    use_gt_imu = False  # 실제 IMU 데이터 사용 (더 안정적)
 
     # rosbag 녹화 - 새로운 영어 레이블 사용
     now = datetime.now().strftime("%Y%m%d_%H%M")
